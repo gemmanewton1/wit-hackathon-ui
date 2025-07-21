@@ -1,6 +1,7 @@
 # Hackathon Java Starter
 
 This is a simple Spring Boot backend starter for hackathon projects.
+## 
 **Some useful reading:**
  - https://spring.io/guides/tutorials/rest
  - https://spring.io/guides/gs/rest-service
