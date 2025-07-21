@@ -18,11 +18,6 @@ This is a simple Spring Boot backend starter for hackathon projects.
     ./gradlew bootRun
     ```
 
-   Or, if using Maven:
-
-    ```sh
-    mvn spring-boot:run
-    ```
 
 3. **Access the Application**
 
@@ -57,3 +52,11 @@ To run with Gradle wrapper:
 ```sh
 cd java-starter
 ./gradlew bootRun
+```
+
+## 📄 How to test out noSql database works
+- First, make sure you have Docker installed and running. Go to the root of the project and:
+- Run the MongoDB container with docker compose up -d
+- docker exec -it hackathon-mongodb mongosh -u root -p example --authenticationDatabase admin --host localhost --port 27017
+- Type in: show collections
+- If you see customer and products, the db works
