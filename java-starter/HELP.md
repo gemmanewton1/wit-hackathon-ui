@@ -23,6 +23,7 @@ This is a simple Spring Boot backend starter for hackathon projects.
 
    The server will start on [http://localhost:8080](http://localhost:8080) by default.
 4. **Access the H2 console until database connections are built**
+    - Open your browser and go to [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
 
    - JDBC URL: jdbc:h2:mem:testdb
    - Username: sa
