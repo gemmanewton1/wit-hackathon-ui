@@ -1,18 +1,16 @@
 package com.example.demo.model;
 
-import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
-import java.util.Objects;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
 
 /**
- * Product entity representing an item in the store.
+ * Product entity representing an item in the store (MongoDB document).
  */
-@Entity
-@Table(name = "products") // Explicit table name (optional, for clarity)
+@Document(collection = "products")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @NotBlank(message = "Product name is required")
     @Size(max = 100, message = "Name cannot exceed 100 characters")
@@ -21,7 +19,7 @@ public class Product {
     @Min(value = 0, message = "Price must be non-negative")
     private double price;
 
-    // Default constructor for JPA
+    // Default constructor required by frameworks
     public Product() {}
 
     // All-args constructor for easy instantiation
@@ -31,30 +29,27 @@ public class Product {
     }
 
     // Getters and setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
-
     public double getPrice() { return price; }
     public void setPrice(double price) { this.price = price; }
 
     /**
-     * Equals method recommended for JPA entities.
-     * Entities are considered equal if their IDs are non-null and equal.
+     * Equals method for MongoDB entities.
+     * Two products are equal if their IDs are non-null and equal.
      */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Product)) return false;
-        Product other = (Product) o;
+        if (!(o instanceof Product other)) return false;
         return id != null && id.equals(other.getId());
     }
 
     /**
-     * HashCode recommended for JPA entities.
-     * Uses the ID if set, otherwise defaults to system hash (not persistent).
+     * HashCode for MongoDB entities.
+     * Uses the ID if set, otherwise defaults to system hash.
      */
     @Override
     public int hashCode() {
@@ -63,6 +58,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("Product{id=%d, name='%s', price=%f}", id, name, price);
+        return String.format("Product{id=%s, name='%s', price=%f}", id, name, price);
     }
 }

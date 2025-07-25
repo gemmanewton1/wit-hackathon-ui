@@ -5,13 +5,13 @@ db = db.getSiblingDB('hackathon');
 // Explicitly create a 'customer' collection.
 // Collections are like "tables" in relational databases—but more flexible.
 // Creating explicitly allows you to add options or validation if needed.
-db.createCollection('customer');
+db.createCollection('customers');
 
 // Explicitly create a 'product' collection.
-db.createCollection('product');
+db.createCollection('products');
 
 // Insert a sample customer document into the 'customer' collection.
-db.customer.insertOne({
+db.customers.insertOne({
     firstName: "Jane",
     lastName: "Doe",
     email: "[email protected]",
@@ -20,7 +20,7 @@ db.customer.insertOne({
 });
 
 // Insert a sample product document into the 'product' collection.
-db.product.insertOne({
+db.products.insertOne({
     name: "Sample Widget",
     price: 19.99
 });

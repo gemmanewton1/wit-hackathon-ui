@@ -1,12 +1,11 @@
 package com.example.demo.repository;
 
 import com.example.demo.model.Customer;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * JPA repository for Customer
+ * Mongo repository for Customer
  */
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer, Long> {
-}
+public interface CustomerRepository extends MongoRepository<Customer, String> { }

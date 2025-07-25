@@ -8,6 +8,7 @@ public class HackathonStarterApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HackathonStarterApplication.class, args);
+
 	}
 
 }

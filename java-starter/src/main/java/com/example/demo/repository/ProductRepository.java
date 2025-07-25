@@ -1,12 +1,11 @@
 package com.example.demo.repository;
 
 import com.example.demo.model.Product;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * JPA repository for Product
+ * Mongo repository for Product
  */
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
-}
+public interface ProductRepository extends MongoRepository<Product, String> { }

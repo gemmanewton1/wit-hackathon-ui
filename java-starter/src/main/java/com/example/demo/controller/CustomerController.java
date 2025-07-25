@@ -28,18 +28,18 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Customer> getById(@PathVariable Long id) {
+    public Optional<Customer> getById(@PathVariable String id) {
         return repo.findById(id);
     }
 
     @PutMapping("/{id}")
-    public Customer update(@PathVariable Long id, @RequestBody Customer customer) {
+    public Customer update(@PathVariable String id, @RequestBody Customer customer) {
         customer.setId(id);
         return repo.save(customer);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable String id) {
         repo.deleteById(id);
     }
 }

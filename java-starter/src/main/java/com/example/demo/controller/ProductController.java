@@ -28,18 +28,18 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Product> getById(@PathVariable Long id) {
+    public Optional<Product> getById(@PathVariable String id) {
         return repo.findById(id);
     }
 
     @PutMapping("/{id}")
-    public Product update(@PathVariable Long id, @RequestBody Product product) {
+    public Product update(@PathVariable String id, @RequestBody Product product) {
         product.setId(id);
         return repo.save(product);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable String id) {
         repo.deleteById(id);
     }
 }
