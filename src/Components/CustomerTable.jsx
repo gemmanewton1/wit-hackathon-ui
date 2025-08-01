@@ -3,8 +3,8 @@ const CustomerTable = ({ customers, onDelete }) => {
     <div className="table-wrapper">
       <h2>Customers List</h2>
       <p>
-        This table shows all the customers saved in the backend - both the ones
-        you add and those already stored.
+        This table shows all customers saved in the backend, including the ones
+        you've added and those already stored.
       </p>
       <table className="styled-table">
         <thead>

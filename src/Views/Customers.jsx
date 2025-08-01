@@ -20,6 +20,7 @@ const Customers = () => {
   }, []);
 
   const handleAddCustomer = (newCustomer) => {
+    setError(null);
     addCustomer(newCustomer)
       .then((res) => {
         setCustomers((previousCustomers) => [...previousCustomers, res.data]);
@@ -31,10 +32,10 @@ const Customers = () => {
   };
 
   const handleDeleteCustomer = (id) => {
+    setError(null);
     deleteCustomer(id)
       .then(() => {
         setCustomers((prev) => prev.filter((customer) => customer.id !== id));
-        setError(null);
       })
       .catch((err) => {
         console.error("Failed to delete customer", err);
