@@ -11,6 +11,7 @@ import java.util.Optional;
 /**
  * REST controller for /products endpoint, supporting CRUD for Product.
  */
+@CrossOrigin(origins = "http://localhost:3000") // <--- Allow React frontend origin
 @RestController
 @RequestMapping("/products")
 public class ProductController {
