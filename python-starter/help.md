@@ -120,10 +120,6 @@ This project uses MongoDB as its database for storing and retrieving customer an
 - **Scalability:** MongoDB can handle large datasets and concurrent requests.
 - **Security:** Connection details are managed via environment variables, not hardcoded.
 
-## Notes
-- This project uses an in-memory database, so data will be lost when the server restarts.
-- For production use, consider integrating a persistent database.
-
 ## What is FastAPI?
 FastAPI is a modern, fast (high-performance) web framework for building APIs with Python 3.7+ based on standard Python type hints. It is designed for building robust and scalable RESTful APIs quickly and easily, with automatic data validation, interactive documentation, and support for asynchronous programming. FastAPI is widely used in commercial and open-source projects for its speed, ease of use, and automatic generation of OpenAPI and JSON Schema documentation.
 
