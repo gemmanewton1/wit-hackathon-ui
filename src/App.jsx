@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Views/Home";
-import About from "./Views/About";
-import Contact from "./Views/Contact";
+import Products from "./Views/Products";
+import Customers from "./Views/Customers";
 import NotFound from "./Views/NotFound";
-import logo from "./logo.svg";
+import logo from "./witLogo.png";
 import "./App.css";
 
 const App = () => (
@@ -15,18 +15,18 @@ const App = () => (
           <Link to="/" style={{ margin: "0 10px", color: "#61dafb" }}>
             Home
           </Link>
-          <Link to="/about" style={{ margin: "0 10px", color: "#61dafb" }}>
-            About
+          <Link to="/products" style={{ margin: "0 10px", color: "#61dafb" }}>
+            Products
           </Link>
-          <Link to="/contact" style={{ margin: "0 10px", color: "#61dafb" }}>
-            Contact
+          <Link to="/customers" style={{ margin: "0 10px", color: "#61dafb" }}>
+            Customers
           </Link>
         </nav>
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/customers" element={<Customers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </header>
