@@ -1,6 +1,6 @@
 # MongoDB Initialization Scripts Guide
 
-This guide explains how to use the MongoDB setup scripts (`.js` files) with your Docker-based development environment. These scripts help you automatically create collections, enforce schema validation, and seed initial data for your hackathon project.
+This guide explains how to use the MongoDB setup scripts (`.js` files) with your Docker-based development environment. These scripts help you automatically create collections, enforce schema validation, and seed initial data for your hackathon project. Setup.js is connected tp the database but dummySetup.js is just another example of the kind of data schema you could have.
 
 ---
 
