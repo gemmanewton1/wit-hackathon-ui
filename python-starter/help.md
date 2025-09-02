@@ -25,6 +25,8 @@ This guide explains how to install and run the FastAPIProject on your local mach
        ```bash
        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
        ```
+     - This may be blocked, so do try to download python from the official website if you have issues.
+     
 3. **Verify Python and pip Installation**
    - Open a terminal (Command Prompt or PowerShell on Windows).
    - Check Python version:
