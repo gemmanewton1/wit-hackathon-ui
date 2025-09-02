@@ -64,7 +64,6 @@ This guide explains how to install and run the FastAPIProject on your local mach
 3. **Set Up Virtual Environment**
     - We will be creating a python3 virtual environment to isolate our project dependencies.
     - In your terminal, run the following command to create a virtual environment named `venv
-    - `:
       ```bash
       python3 -m venv venv
       ```
