@@ -60,6 +60,7 @@ This guide explains how to install and run the FastAPIProject on your local mach
      cd /Users/YourName/Documents/FastAPIProject
      ```
    - This will be specific to where you have saved the project files.
+   - If you want to find the location in the terminal you can use pwd command on macOS/Linux or cd command on Windows.
    
 3. **Set Up Virtual Environment**
     - We will be creating a python3 virtual environment to isolate our project dependencies.
