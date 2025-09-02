@@ -18,23 +18,28 @@ This guide explains how to install and run the FastAPIProject on your local mach
 
    - On macOS/Linux, Python is often pre-installed. If not, you can use package managers like Homebrew (macOS) or apt/yum (Linux) to install it.
      - For example, on macOS, you can run:
-       ```bash
+       ```zsh
        brew install python
        ```
      - if this is not installed you can install homebrew by running the following command in your terminal:
-       ```bash
-       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+       ```zsh
+       /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
        ```
      - This may be blocked, so do try to download python from the official website if you have issues.
      
 3. **Verify Python and pip Installation**
    - Open a terminal (Command Prompt or PowerShell on Windows).
    - Check Python version:
-     ```bash
+     ```zsh
      python --version
      ```
+    - or on some systems you may need to use:
+      ```zsh
+      python3 --version
+        ```
+      
    - Check pip version:
-     ```bash
+     ```zsh
      pip --version
      ```
    - If both commands show a version number, Python and pip are installed correctly.
@@ -47,43 +52,43 @@ This guide explains how to install and run the FastAPIProject on your local mach
 
 2. **Navigate to the Project Directory**
    - Open a terminal and change to the project folder:
-     ```bash
+     ```
      cd path/to/python-starter
      ```
    - Replace `path/to/python-starter` with the actual path where you saved the project.
    - for example:
-     ```bash
+     ```
      cd C:\Users\YourName\Documents\python-starter
      ```
    - or on macOS/Linux:
-     ```bash
+     ```
      cd /Users/YourName/Documents/python-starter
      ```
    - This will be specific to where you have saved the project files.
    - If you want to find the location in the terminal you can use
    - Command on macOS/Linux
-     ```bash
+     ```zsh
      pwd 
      ```
    - Command on Windows.
-      ```bash
+      ```zsh
       cd 
       ```
    
 3. **Set Up Virtual Environment**
     - We will be creating a python3 virtual environment to isolate our project dependencies.
     - In your terminal, run the following command to create a virtual environment named `venv
-      ```bash
+      ```zsh
       python3 -m venv venv
       ```
     - This will create a folder named `venv` in your project directory containing the virtual environment.
     - To activate the virtual environment, run:
     - On Windows:
-      ```bash
+      ```shell
       venv\Scripts\activate
       ```
     - On macOS/Linux:
-      ```bash
+      ```zsh
       source venv/bin/activate
       ```
     - You should see `(venv)` at the beginning of your terminal prompt, indicating that
@@ -92,32 +97,32 @@ This guide explains how to install and run the FastAPIProject on your local mach
 
 4. **Install Dependencies**
    - Install required Python packages using pip:
-     ```bash
+     ```zsh
      pip install -r requirements.txt
      ```
 
 ## Running the FastAPI Application
 1. **Start the Server**
       - From here within the python project directory we will need to cd into source folder:
-        ```bash
+        ```zsh
         cd src
         ```
       - Run the following command in your terminal:
-        ```bash
-        uvicorn fastapiproject.main:app --reload
+        ```zsh
+        uvicorn fastapiproject.main:app --reload --port 8080
         ```
-      - The server will start at `http://127.0.0.1:8000/`
+      - The server will start at `http://127.0.0.1:8080/`
 
 2. **Access the API Documentation**
    - Open your browser and go to:
-     - Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-     - ReDoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+     - Swagger UI: [http://127.0.0.1:8080/docs](http://127.0.0.1:8080/docs)
+     - ReDoc: [http://127.0.0.1:8080/redoc](http://127.0.0.1:8080/redoc)
 
 ## Running Tests
 
 1. **Run the Tests**
    - In your terminal, execute:
-     ```bash
+     ```zsh
      pytest tests/test_main.py
      ```
    - This will run all tests in the tests/test_main.py file and show the results.

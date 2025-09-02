@@ -6,3 +6,5 @@ httpx
 motor
 python-dotenv
 pytest-asyncio
+bson
+pydantic_mongo

@@ -10,12 +10,12 @@ MONGODB_USERNAME = os.getenv("MONGODB_USERNAME")
 MONGODB_PASSWORD = os.getenv("MONGODB_PASSWORD")
 MONGODB_HOST = os.getenv("MONGODB_HOST", "localhost")
 MONGODB_PORT = os.getenv("MONGODB_PORT", "27017")
-DB_NAME = os.getenv("DB_NAME", "fastapi_db")
+DB_NAME = os.getenv("DB_NAME", "hackathon")
 
 if MONGODB_USERNAME and MONGODB_PASSWORD:
-    MONGODB_URI = f"mongodb://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@{MONGODB_HOST}:{MONGODB_PORT}"
+    MONGODB_URI = f"mongodb://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@{MONGODB_HOST}:{MONGODB_PORT}/{DB_NAME}?authSource=admin"
 else:
-    MONGODB_URI = f"mongodb://{MONGODB_HOST}:{MONGODB_PORT}"
+    MONGODB_URI = f"mongodb://{MONGODB_HOST}:{MONGODB_PORT}/{DB_NAME}?authSource=admin"
 
 # Create a global MongoDB client
 client = AsyncIOMotorClient(MONGODB_URI)
