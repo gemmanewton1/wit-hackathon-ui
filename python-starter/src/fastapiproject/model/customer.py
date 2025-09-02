@@ -1,14 +1,13 @@
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional
 from datetime import date, datetime
-from bson import ObjectId
 from pydantic_mongo import AbstractRepository, PydanticObjectId
 from pydantic.functional_validators import AfterValidator
 from typing_extensions import Annotated
 
 
 class Customer(BaseModel):
-    id: Optional[PydanticObjectId] = None
+    id: Optional[PydanticObjectId] = Field(alias="_id")
     firstName: str = Field(..., max_length=50, description="First name is required")
     lastName: str = Field(..., max_length=50, description="Last name is required")
     email: Optional[str]= Field(..., max_length=50, description="Email is required")
