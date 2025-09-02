@@ -13,9 +13,7 @@ logging.basicConfig(level=logging.INFO)
 @router.post("/products", response_model=Product, status_code=201)
 async def create_product(product: Product):
     db = get_database()  # Get MongoDB database reference
-    product_id = str(uuid.uuid4())  # Generate a unique product ID
     product_dict = product.model_dump()  # Convert Pydantic model to dict
-    product_dict["id"] = product_id  # Add generated ID to product data
     await db["products"].insert_one(product_dict)  # Insert product into MongoDB
     logger.info(f"Product created: {product_dict}")  # Log creation
     return Product(**product_dict)  # Return the created product
