@@ -38,21 +38,55 @@ This guide explains how to install and run the FastAPIProject on your local mach
      ```bash
      cd path/to/FastAPIProject
      ```
+   - Replace `path/to/FastAPIProject` with the actual path where you saved the project.
+   - for example:
+     ```bash
+     cd C:\Users\YourName\Documents\FastAPIProject
+     ```
+   - or on macOS/Linux:
+     ```bash
+     cd /Users/YourName/Documents/FastAPIProject
+     ```
+   - This will be specific to where you have saved the project files.
+   
+3. **Set Up Virtual Environment**
+    - We will be creating a python3 virtual environment to isolate our project dependencies.
+    - In your terminal, run the following command to create a virtual environment named `venv
+    - `:
+      ```bash
+      python3 -m venv venv
+      ```
+    - This will create a folder named `venv` in your project directory containing the virtual environment.
+    - To activate the virtual environment, run:
+    - On Windows:
+      ```bash
+      venv\Scripts\activate
+      ```
+    - On macOS/Linux:
+      ```bash
+      source venv/bin/activate
+      ```
+    - You should see `(venv)` at the beginning of your terminal prompt, indicating that
+    - the virtual environment is active.
 
-3. **Install Dependencies**
+
+4. **Install Dependencies**
    - Install required Python packages using pip:
      ```bash
      pip install -r requirements.txt
      ```
 
 ## Running the FastAPI Application
-
 1. **Start the Server**
-   - Run the following command in your terminal:
-     ```bash
-     uvicorn src.fastapiproject.main:app --reload
-     ```
-   - The server will start at `http://127.0.0.1:8000/`
+      - From here within the python project directory we will need to cd into source folder:
+        ```bash
+        cd src
+        ```
+      - Run the following command in your terminal:
+        ```bash
+        uvicorn fastapiproject.main:app --reload
+        ```
+      - The server will start at `http://127.0.0.1:8000/`
 
 2. **Access the API Documentation**
    - Open your browser and go to:
