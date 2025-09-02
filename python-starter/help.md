@@ -16,6 +16,15 @@ This guide explains how to install and run the FastAPIProject on your local mach
    - Run the installer and follow the instructions.
    - On Windows, make sure to check the box that says "Add Python to PATH" during installation.
 
+   - On macOS/Linux, Python is often pre-installed. If not, you can use package managers like Homebrew (macOS) or apt/yum (Linux) to install it.
+     - For example, on macOS, you can run:
+       ```bash
+       brew install python
+       ```
+     - if this is not installed you can install homebrew by running the following command in your terminal:
+       ```bash
+       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+       ```
 3. **Verify Python and pip Installation**
    - Open a terminal (Command Prompt or PowerShell on Windows).
    - Check Python version:
@@ -32,6 +41,7 @@ This guide explains how to install and run the FastAPIProject on your local mach
 
 1. **Clone or Download the Repository**
    - Download the project files or clone the repository to your local machine.
+   - This should of done already if you followed the initial setup instructions.
 
 2. **Navigate to the Project Directory**
    - Open a terminal and change to the project folder:
