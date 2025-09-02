@@ -63,12 +63,12 @@ This guide explains how to install and run the FastAPIProject on your local mach
    - If you want to find the location in the terminal you can use
    - Command on macOS/Linux
      ```bash
-        pwd 
+     pwd 
      ```
    - Command on Windows.
       ```bash
-        cd 
-     ```
+      cd 
+      ```
    
 3. **Set Up Virtual Environment**
     - We will be creating a python3 virtual environment to isolate our project dependencies.
