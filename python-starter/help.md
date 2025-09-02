@@ -43,24 +43,32 @@ This guide explains how to install and run the FastAPIProject on your local mach
 
 1. **Clone or Download the Repository**
    - Download the project files or clone the repository to your local machine.
-   - This should of done already if you followed the initial setup instructions.
+   - This should have been done already if you followed the initial setup instructions.
 
 2. **Navigate to the Project Directory**
    - Open a terminal and change to the project folder:
      ```bash
-     cd path/to/FastAPIProject
+     cd path/to/python-starter
      ```
-   - Replace `path/to/FastAPIProject` with the actual path where you saved the project.
+   - Replace `path/to/python-starter` with the actual path where you saved the project.
    - for example:
      ```bash
-     cd C:\Users\YourName\Documents\FastAPIProject
+     cd C:\Users\YourName\Documents\python-starter
      ```
    - or on macOS/Linux:
      ```bash
-     cd /Users/YourName/Documents/FastAPIProject
+     cd /Users/YourName/Documents/python-starter
      ```
    - This will be specific to where you have saved the project files.
-   - If you want to find the location in the terminal you can use pwd command on macOS/Linux or cd command on Windows.
+   - If you want to find the location in the terminal you can use
+   - Command on macOS/Linux
+     ```bash
+        pwd 
+     ```
+   - Command on Windows.
+      ```bash
+        cd 
+     ```
    
 3. **Set Up Virtual Environment**
     - We will be creating a python3 virtual environment to isolate our project dependencies.
