@@ -10,7 +10,8 @@ const Customers = () => {
   useEffect(() => {
     fetchCustomers()
       .then((res) => {
-        setCustomers(res.data);
+        // Map _id to id for all customers
+        setCustomers(res.data.map(c => ({ ...c, id: c._id })));
         setError(null); // Clear any previous errors on success
       })
       .catch((err) => {
@@ -35,7 +36,7 @@ const Customers = () => {
     setError(null);
     deleteCustomer(id)
       .then(() => {
-        setCustomers((prev) => prev.filter((customer) => customer.id !== id));
+        setCustomers((prev) => prev.filter((customer) => customer._id !== id));
       })
       .catch((err) => {
         console.error("Failed to delete customer", err);

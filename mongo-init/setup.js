@@ -11,12 +11,14 @@ db.createCollection('customers');
 db.createCollection('products');
 
 // Insert a sample customer document into the 'customer' collection.
-db.customers.insertOne({
+db.customers.insert({
     firstName: "Jane",
     lastName: "Doe",
     email: "[email protected]",
     phone: "1234567890",
-    address: "1 Main St"
+    address: "1 Main St",
+    dateOfBirth: "1990-01-01",
+
 });
 
 // Insert a sample product document into the 'product' collection.

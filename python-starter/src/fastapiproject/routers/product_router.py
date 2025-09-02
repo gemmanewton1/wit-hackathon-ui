@@ -2,8 +2,9 @@ from fastapiproject.db import get_database
 from fastapi import APIRouter, HTTPException, Path
 from typing import List
 from ..model.product import Product
-import uuid
 import logging
+from bson import ObjectId
+
 
 router = APIRouter()
 logger = logging.getLogger("product_router")
@@ -13,9 +14,7 @@ logging.basicConfig(level=logging.INFO)
 @router.post("/products", response_model=Product, status_code=201)
 async def create_product(product: Product):
     db = get_database()  # Get MongoDB database reference
-    product_id = str(uuid.uuid4())  # Generate a unique product ID
-    product_dict = product.model_dump()  # Convert Pydantic model to dict
-    product_dict["id"] = product_id  # Add generated ID to product data
+    product_dict = product.model_dump(exclude={"id"})  # Convert Pydantic model to dict
     await db["products"].insert_one(product_dict)  # Insert product into MongoDB
     logger.info(f"Product created: {product_dict}")  # Log creation
     return Product(**product_dict)  # Return the created product
@@ -33,7 +32,8 @@ async def get_all_products():
 @router.get("/products/{id}", response_model=Product)
 async def get_product_by_id(id: str = Path(...)):
     db = get_database()  # Get MongoDB database reference
-    product = await db["products"].find_one({"id": id})  # Find product by ID
+    obj_id = convert_to_obj_id(id)
+    product = await db["products"].find_one({"_id": obj_id})  # Find product by ID
     if not product:
         logger.warning(f"Product not found: {id}")  # Log warning if product not found
         raise HTTPException(status_code=404, detail="Product not found")  # Raise 404 error
@@ -44,9 +44,9 @@ async def get_product_by_id(id: str = Path(...)):
 @router.put("/products/{id}", response_model=Product)
 async def update_product(id: str, product: Product):
     db = get_database()  # Get MongoDB database reference
-    product_dict = product.model_dump()  # Convert Pydantic model to dict
-    product_dict["id"] = id  # Ensure the ID in the data matches the URL
-    result = await db["products"].replace_one({"id": id}, product_dict)  # Update the product in MongoDB
+    obj_id = convert_to_obj_id(id)
+    product_dict = product.model_dump(exclude={"id"})  # Convert Pydantic model to dict
+    result = await db["products"].replace_one({"_id": obj_id}, product_dict)  # Update the product in MongoDB
     if result.matched_count == 0:
         logger.warning(f"Product not found for update: {id}")  # Log warning if product not found
         raise HTTPException(status_code=404, detail="Product not found")  # Raise 404 error
@@ -57,8 +57,19 @@ async def update_product(id: str, product: Product):
 @router.delete("/products/{id}", status_code=204)
 async def delete_product(id: str):
     db = get_database()  # Get MongoDB database reference
-    result = await db["products"].delete_one({"id": id})  # Delete the product from MongoDB
+    obj_id = convert_to_obj_id(id)
+    result = await db["products"].delete_one({"_id": obj_id})  # Delete the product from MongoDB
     if result.deleted_count == 0:
         logger.warning(f"Product not found for deletion: {id}")  # Log warning if product not found
         raise HTTPException(status_code=404, detail="Product not found")  # Raise 404 error
     logger.info(f"Product deleted: {id}")  # Log successful deletion
+
+
+def convert_to_obj_id(id: str):
+    try:
+        object_id = ObjectId(id)
+        return object_id
+    except Exception:
+        logger.warning(f"Invalid ObjectId for deletion: {id}")
+        raise HTTPException(status_code=400, detail="Invalid product ID format")
+
