@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(() => {
     fetchProducts()
       .then((res) => {
-        setProducts(res.data);
+        setProducts(res.data.map(p => ({ ...p, id: p._id })));
       })
       .catch((err) => {
         console.error("Failed to fetch products", err);
@@ -34,7 +34,7 @@ const Products = () => {
     setError(null);
     deleteProduct(id)
       .then(() => {
-        setProducts((prev) => prev.filter((product) => product.id !== id));
+        setProducts((prev) => prev.filter((product) => product._id !== id));
       })
       .catch((err) => {
         console.error("Failed to delete product", err);

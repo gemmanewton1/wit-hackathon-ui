@@ -20,7 +20,7 @@ const CustomerTable = ({ customers, onDelete }) => {
         </thead>
         <tbody>
           {customers.map((customer) => (
-            <tr key={customer.id}>
+            <tr key={customer._id}>
               <td>{customer.firstName}</td>
               <td>{customer.lastName}</td>
               <td>{customer.phone}</td>
@@ -30,7 +30,7 @@ const CustomerTable = ({ customers, onDelete }) => {
 
               <td>
                 <button
-                  onClick={() => onDelete(customer.id)}
+                  onClick={() => onDelete(customer._id)}
                   className="delete-btn"
                   aria-label={`Delete customer ${customer.firstName} ${customer.lastName}`}
                 >

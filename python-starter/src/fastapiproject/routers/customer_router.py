@@ -4,7 +4,6 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from typing import List
 from ..model.customer import Customer
-import uuid
 import logging
 from datetime import datetime
 from bson import ObjectId
@@ -21,7 +20,7 @@ async def create_customer(customer: Customer, request: Request):
     logger.info(f"Raw request body: {raw_body.decode('utf-8')}")
     db = get_database()  # Get MongoDB database reference
     current_time = datetime.utcnow()
-    customer_dict = customer.model_dump()  # Convert Pydantic model to dict
+    customer_dict = customer.model_dump(exclude={"id"})  # Convert Pydantic model to dict
 
     # Convert dateOfBirth to datetime if it exists
     if customer_dict.get("dateOfBirth"):
@@ -62,7 +61,7 @@ async def get_customer_by_id(id: str = Path(...)):
 async def update_customer(id: str, customer: Customer):
     db = get_database()  # Get MongoDB database reference
     id_obj = convert_to_obj_id(id)
-    customer_dict = customer.model_dump()  # Convert Pydantic model to dict
+    customer_dict = customer.model_dump(exclude={"id"})  # Convert Pydantic model to dict
     customer_dict.update({
         "updated_at": datetime.utcnow()
     })  # Ensure the ID in the data matches the URL and update timestamp
@@ -84,7 +83,7 @@ async def delete_customer(id: str):
         raise HTTPException(status_code=404, detail="Customer not found")  # Raise 404 error
     logger.info(f"Customer deleted: {id}")  # Log successful deletion
 
-async def convert_to_obj_id(id: str):
+def convert_to_obj_id(id: str):
     try:
         object_id = ObjectId(id)
         return object_id
