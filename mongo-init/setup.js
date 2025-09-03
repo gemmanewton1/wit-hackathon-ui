@@ -19,7 +19,8 @@ db.customers.insert({
     address: "1 Main St",
     dateOfBirth: "1990-01-01",
 
-});
+}, {"address":"6308 Highmeadow Lane, Springfield, Illinois, United States, 62794","date_of_birth":"1949-10-23","email":"kimbell.hiscoe@yahoo.com","first_name":"Kimbell","id":1,"last_name":"Hiscoe","phone":"(217) 869-7351"}
+);
 
 // Insert a sample product document into the 'product' collection.
 db.products.insertOne({
