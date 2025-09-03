@@ -26,7 +26,6 @@ async def test_create_product(mock_get_db, mock_db):
     mock_get_db.return_value = mock_db
     product_data = {
         "name": "John Doe",
-        "description": "A sample product",
         "price": 9.99
     }
     transport = ASGITransport(app=app)
@@ -35,14 +34,14 @@ async def test_create_product(mock_get_db, mock_db):
     assert response.status_code == 201
     data = response.json()
     assert data["name"] == product_data["name"]
-    assert "id" in data
+    assert "_id" in data
 
 @pytest.mark.anyio
 @patch("fastapiproject.routers.product_router.get_database")
 async def test_get_all_product(mock_get_db, mock_db):
     product = [
-        {"id": "1", "name": "Alice", "description": "desc1", "price": 1.0},
-        {"id": "2", "name": "Bob", "description": "desc2", "price": 2.0}
+        {"name": "Alice", "price": 1.0},
+        {"name": "Bob", "price": 2.0}
     ]
     async def fake_find():
         for c in product:
@@ -71,7 +70,7 @@ async def test_delete_product_success(mock_get_db, mock_db):
     transport = ASGITransport(app=app)
     # Send DELETE request for product with id '1'
     async with AsyncClient(transport=transport, base_url="http://test") as ac:
-        response = await ac.delete("/products/1")
+        response = await ac.delete("/products/507f1f77bcf86cd799439011")
     assert response.status_code == 204  # Expect HTTP 204 No Content
 
 # Test for product not found during deletion via DELETE /product/{id}
@@ -86,6 +85,6 @@ async def test_delete_product_not_found(mock_get_db, mock_db):
     transport = ASGITransport(app=app)
     # Send DELETE request for non-existent product id '999'
     async with AsyncClient(transport=transport, base_url="http://test") as ac:
-        response = await ac.delete("/products/999")
+        response = await ac.delete("/products/507f1f77bcf86cd799439011")
     assert response.status_code == 404  # Expect HTTP 404 Not Found
     assert response.json()["detail"] == "Product not found"  # Check error message

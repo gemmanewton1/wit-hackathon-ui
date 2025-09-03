@@ -25,24 +25,26 @@ def mock_db():
 async def test_create_customer(mock_get_db, mock_db):
     mock_get_db.return_value = mock_db
     customer_data = {
-        "name": "John Doe",
+        "firstName": "John",
+        "lastName": "Doe",
         "email": "john@example.com",
-        "address": "123 Main St"
+        "address": "123 Main St",
+        "phone": "123-456-7890"
     }
     transport = ASGITransport(app=app)
     async with AsyncClient(transport=transport, base_url="http://test") as ac:
         response = await ac.post("/customers", json=customer_data)
     assert response.status_code == 201
     data = response.json()
-    assert data["name"] == customer_data["name"]
-    assert "id" in data
+    assert data["firstName"] == customer_data["firstName"]
+    assert "_id" in data
 
 @pytest.mark.anyio
 @patch("fastapiproject.routers.customer_router.get_database")
 async def test_get_all_customers(mock_get_db, mock_db):
     customers = [
-        {"id": "1", "name": "Alice", "email": "alice@example.com", "address": "A St"},
-        {"id": "2", "name": "Bob", "email": "bob@example.com", "address": "B St"}
+        {"firstName": "Alice", "lastName": "Doe","email": "alice@example.com", "address": "123 Main St", "phone": "123-456-7890"},
+        {"firstName": "Bob", "lastName": "Doe","email": "bob@example.com", "address": "123 Main St", "phone": "123-456-7890"}
     ]
     async def fake_find():
         for c in customers:
@@ -56,8 +58,8 @@ async def test_get_all_customers(mock_get_db, mock_db):
     assert response.status_code == 200  # Expect HTTP 200 OK
     data = response.json()
     assert len(data) == 2  # Should return two customers
-    assert data[0]["name"] == "Alice"  # Check first customer's name
-    assert data[1]["name"] == "Bob"    # Check second customer's name
+    assert data[0]["firstName"] == "Alice"  # Check first customer's name
+    assert data[1]["firstName"] == "Bob"    # Check second customer's name
 
 # Test for successful customer deletion via DELETE /customers/{id}
 @pytest.mark.anyio
@@ -71,7 +73,7 @@ async def test_delete_customer_success(mock_get_db, mock_db):
     transport = ASGITransport(app=app)
     # Send DELETE request for customer with id '1'
     async with AsyncClient(transport=transport, base_url="http://test") as ac:
-        response = await ac.delete("/customers/1")
+        response = await ac.delete("/customers/507f1f77bcf86cd799439011")
     assert response.status_code == 204  # Expect HTTP 204 No Content
 
 # Test for customer not found during deletion via DELETE /customers/{id}
@@ -86,6 +88,6 @@ async def test_delete_customer_not_found(mock_get_db, mock_db):
     transport = ASGITransport(app=app)
     # Send DELETE request for non-existent customer id '999'
     async with AsyncClient(transport=transport, base_url="http://test") as ac:
-        response = await ac.delete("/customers/999")
+        response = await ac.delete("/customers/507f1f77bcf86cd799439011")
     assert response.status_code == 404  # Expect HTTP 404 Not Found
     assert response.json()["detail"] == "Customer not found"  # Check error message

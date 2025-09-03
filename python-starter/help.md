@@ -123,7 +123,10 @@ This guide explains how to install and run the FastAPIProject on your local mach
 1. **Run the Tests**
    - In your terminal, execute:
      ```zsh
-     pytest tests/test_main.py
+     pytest tests/test_customer_router.py
+     ``` 
+     ```zsh
+     pytest tests/test_product_router.py
      ```
    - This will run all tests in the tests/test_main.py file and show the results.
 
