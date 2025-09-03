@@ -16,12 +16,12 @@ const ProductTable = ({ products, onDelete }) => {
         </thead>
         <tbody>
           {products.map((product) => (
-            <tr key={product._id}>
+            <tr key={product.id || product._id}>
               <td>{product.name}</td>
               <td>{product.price.toFixed(2)}</td>
               <td className="actions">
                 <button
-                  onClick={() => onDelete(product._id)}
+                  onClick={() => onDelete(product.id || product._id)}
                   className="delete-btn"
                   aria-label={`Delete product ${product.name}`}
                 >
