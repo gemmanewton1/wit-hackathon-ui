@@ -2,14 +2,13 @@ package com.example.demo.model;
 
 import jakarta.validation.constraints.*;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.annotation.Id;
 
 /**
  * Product entity representing an item in the store (MongoDB document).
  */
 @Document(collection = "products")
 public class Product {
-    @Id
+    
     private String id;
 
     @NotBlank(message = "Product name is required")

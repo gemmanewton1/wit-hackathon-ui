@@ -30,7 +30,7 @@ const CustomerTable = ({ customers, onDelete }) => {
 
               <td>
                 <button
-                  onClick={() => onDelete(customer._id)}
+                  onClick={() => onDelete(customer._id || customer.id)}
                   className="delete-btn"
                   aria-label={`Delete customer ${customer.firstName} ${customer.lastName}`}
                 >
