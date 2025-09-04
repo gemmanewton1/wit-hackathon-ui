@@ -1,11 +1,7 @@
 package com.example.demo.model;
 
 import jakarta.validation.constraints.*;
-import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.FieldType;
 
 /**
  * Product entity representing an item in the store (MongoDB document).
