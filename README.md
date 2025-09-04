@@ -1,30 +1,105 @@
-This repository contains various codebases within it
-It has a java and a python backend
-It also has a react frontend
-It also has a next.js app
-There is a docker compose file to start a mongodb database
-This is meant to serve as a basis for your solutions, you can choose to use any or all of the codebases
+Multi-Codebase Project Setup
+============================
 
-This document is meant to direct you to the relevant sections for setting up each codebase quickly
-Inside each codebase you will find a help.md file with more detailed instructions about how the code works, the frameworks it is using, etc
+This repository contains multiple codebases that you can explore:
 
-To just get our basic app up and running follow the instructions below
+-   Java backend
+-   Python backend
+-   React frontend
+-   Next.js app
+-   Docker Compose setup for MongoDB database
 
-To get mongoDB database up enter the following into terminal
-You need to have docker and docker compose installed
-If you don't have docker installed you can get it from https://www.docker.com/get-started
-docker compose up ( Add  -d if you want it to run in the background)
-docker compose down ( to stop it, add -v if you want to remove the database too)
+Refer to the `README.md` inside each codebase for more detailed instructions about code usage, frameworks, and additional info.
 
-Then follow the instructions below for the react codebase
+Quick Start Guide
+-----------------
 
-If you don't have brew installed on macOS you can install it from https://brew.sh/
-If you don't have node installed you can install it from https://nodejs.org/en/download/ or if you have brew you can run
-brew install npm
-npm install
-npm start
+### 1\. Prerequisites
 
-Then follow the instructions below for the backend codebase you want to run
+-   Docker & Docker Compose\
+    Download: [Get Docker](https://www.docker.com/get-started)
+-   Node.js\
+    Download: [Get Node.js](https://nodejs.org/en/download/)
+-   Homebrew (macOS only, optional for installing Node.js)\
+    Download: [Get Homebrew](https://brew.sh/)
 
-Python 
+* * * * *
 
+### 2\. MongoDB Database Setup
+
+To start the MongoDB database (ensure Docker & Compose are installed):
+
+
+# Start MongoDB (add -d to run in background)
+
+docker compose up
+
+# Stop MongoDB (add -v to remove the database volume)
+
+docker compose down
+
+* * * * *
+
+### 3\. React Frontend Setup
+
+1.  Ensure Node.js (`node` and `npm`) is installed:
+    -   Install via official site (see Prerequisites above)\
+        OR
+    -   macOS:
+
+        brew install npm
+
+2.  Install dependencies and start the React app:
+
+    sh
+
+    npm install
+
+    npm start
+
+* * * * *
+
+### 4\. Backend Codebase Setup
+
+Choose one or more of the following depending on your needs.
+
+#### Python Backend
+
+-   See the README inside the Python backend folder for full instructions.
+
+#### Java Backend
+
+-   See the README inside the Java backend folder for full instructions.
+
+#### Node Backend
+
+-   See the README inside the Node backend folder for full instructions.
+
+* * * * *
+
+Additional Information
+----------------------
+
+Each codebase contains a `README.md` with:
+
+-   Detailed setup steps
+-   Usage instructions
+-   Frameworks and dependencies
+-   Advanced configuration
+
+* * * * *
+
+Quick Reference
+---------------
+
+-   MongoDB:\
+    `docker compose up` --- Start database\
+    `docker compose down` --- Stop database
+
+-   React Frontend:\
+    `npm install` --- Install dependencies\
+    `npm start` --- Run frontend
+
+* * * * *
+
+Feel free to use any or all of the codebases as needed.
