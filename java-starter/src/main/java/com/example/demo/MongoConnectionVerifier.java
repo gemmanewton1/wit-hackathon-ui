@@ -19,7 +19,7 @@ public class MongoConnectionVerifier implements CommandLineRunner {
         try {
             long countCustomer = customerRepository.count();
             System.out.println("MongoDB connection verified! \n Customer count: " + countCustomer);
-            long countProduct = customerRepository.count();
+            long countProduct = productRepository.count();
             System.out.println("Product count: " + countProduct);
         } catch (Exception e) {
             System.err.println("Cannot connect to MongoDB: " + e.getMessage());

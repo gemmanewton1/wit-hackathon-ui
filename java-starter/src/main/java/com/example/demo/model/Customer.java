@@ -1,8 +1,10 @@
 package com.example.demo.model;
 
 import jakarta.validation.constraints.*;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.FieldType;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -12,7 +14,7 @@ import java.time.LocalDateTime;
 @Document(collection = "customers")
 public class Customer {
 
-    @Id
+    @Field(targetType = FieldType.OBJECT_ID)
     private String id;
 
     @NotBlank(message = "First name is required")
