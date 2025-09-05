@@ -11,10 +11,9 @@ This guide explains how to use the MongoDB setup scripts (`.js` files) with your
     - Create collections
     - Configure schema validation
     - Insert sample data
-
+- The setup.js, which is what the starter apps use, do not enforce any schema validation, but it is generally good practice in software development to do so. setupDummy.js has examples of this.
 ---
 
 ## 📦 Where to Put Setup Scripts
 
 - Place your scripts (e.g. `setup.js`) in a directory called `mongo-init` in the root of your project.
-- The directory structure should look like:
