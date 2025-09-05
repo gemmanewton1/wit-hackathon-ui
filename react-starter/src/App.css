@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+nav {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-error{
+  color: red;
+  margin-bottom: 1rem;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  width: max-content;
+  min-width: 100%
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.styled-table th{
+  background-color: #22223b;
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+}
+.styled-table td {
+  border-bottom: 1px solid #22223b;
+  padding: 0.75rem;
+  text-align: left;
+}
+.delete-btn {
+  background-color: red;
+  color:white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.delete-btn:hover {
+  background-color: #a3292b;
+}
+.App-header { 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #22223b; 
+}
+
+.App-link {
+  color: #61dafb;
+}
+
