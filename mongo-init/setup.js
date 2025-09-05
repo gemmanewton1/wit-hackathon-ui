@@ -14,7 +14,7 @@ db.createCollection('products');
 db.customers.insert({
     firstName: "Jane",
     lastName: "Doe",
-    email: "[email protected]",
+    email: "doejanedoe@hotmail.com",
     phone: "1234567890",
     address: "1 Main St",
     dateOfBirth: "1990-01-01",
