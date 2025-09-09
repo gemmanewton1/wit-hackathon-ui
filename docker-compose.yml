@@ -1,7 +1,7 @@
 services:
   mongodb:
   #switch to mongo:4.4 if your pc does not have a CPU with AVX support
-    image: mongo:4.4
+    image: latest
     container_name: hackathon-mongodb
     restart: always
     ports:
