@@ -1,0 +1,223 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #222;
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #22223b;
+  letter-spacing: 0.02em;
+}
+
+/* Links */
+a {
+  color: #46bed7;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  background: #22223b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1em 1.4em;
+  margin: 0.5em 0;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.1s;
+}
+button:hover,
+button:focus {
+  background: #1e40af;
+  outline: none;
+  transform: translateY(-2px) scale(1.03);
+}
+button:active {
+  background: #1e3a8a;
+  transform: translateY(0) scale(0.98);
+}
+button[disabled] {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+/* Inputs & Selects */
+input,
+select,
+textarea {
+  font-size: 1rem;
+  padding: 0.55em 0.9em;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background: #fff;
+  margin: 0.4em 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.18s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+}
+
+/* Checkbox & Radio */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.5em;
+  accent-color: #2563eb;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e1e4;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
+  padding: 1.4em;
+  margin: 1.2em 0;
+  transition: box-shadow 0.18s;
+}
+.card:hover {
+  box-shadow: 0 4px 18px rgba(39, 70, 133, 0.1);
+}
+
+/* Navbar */
+nav {
+  background: #22223b;
+  color: #fff;
+  padding: 1em 2em;
+}
+nav a {
+  color: #fff !important;
+  margin-right: 1.5em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Footer */
+footer {
+  background: #e5e5e5;
+  color: #22223b;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 4em;
+  font-size: 1em;
+}
+
+/* Alerts */
+.alert {
+  padding: 1em 1.4em;
+  border-radius: 4px;
+  margin: 1em 0;
+  font-weight: 500;
+}
+.alert.info {
+  background: #e3f0fc;
+  color: #1565c0;
+}
+.alert.success {
+  background: #e9fbe7;
+  color: #388e3c;
+}
+.alert.warning {
+  background: #fff8e1;
+  color: #997500;
+}
+.alert.error {
+  background: #fbeaea;
+  color: #c62828;
+}
+
+/* Loader (spinner utility) */
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #e0e1e4;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Lists and grids */
+ul {
+  margin: 1em 0 1em 1.5em;
+  padding: 0;
+}
+li {
+  margin-bottom: 0.5em;
+}
+.grid {
+  display: grid;
+  gap: 1.5em;
+}
+@media (min-width: 600px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Utility classes */
+.mt-2 {
+  margin-top: 2em;
+}
+.mb-2 {
+  margin-bottom: 2em;
+}
+.text-center {
+  text-align: center;
+}
+.rounded {
+  border-radius: 8px;
+}
+.shadow {
+  box-shadow: 0 2px 12px rgba(60, 60, 70, 0.05);
+}
+
+/* Code blocks */
+code,
+pre {
+  background: #f6f8fa;
+  color: #183153;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: "Fira Mono", "Menlo", "Monaco", "Consolas", "monospace";
+}

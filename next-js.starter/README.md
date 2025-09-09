@@ -1,0 +1,34 @@
+## 1 - PREREQUISITES & INITIAL SETUP
+
+### Requirements
+* node v20.3+ (install here: nodejs.org)
+* npm v9.6+ (installed when you install node) 
+* docker v24+ (install docker desktop https://docs.docker.com/desktop/)
+* visual studio code (code.visualstudio.com)
+* mongoDB compass
+
+
+### Installation
+1. Clone this repo
+2. In the terminal type `cd wit-hackathon-ui` and press enter 
+3. In the terminal type `cd next-js.starter` and press enter
+4. Run `npm i` to install all the npm packages.
+
+### env variables
+1. create a .env file and ask for the env variables from your tech lead
+
+
+## 2 - RUNNING THE APPLICATION
+
+### Run the database
+1. Open 'docker desktop' and keep it running in the background
+2. Open a new terminal and cd into `wit-hackathon-ui`
+3. Enter in the terminal: `docker compose up --build`
+
+### Run nextjs 
+1. Check your directory in your terminal is `next-js.starter`
+2. Enter `npm run dev`
+
+`
+
+[⬅️ Back](../README.md)
