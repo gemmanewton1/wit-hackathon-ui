@@ -5,7 +5,6 @@
 * npm v9.6+ (installed when you install node) 
 * docker v24+ (install docker desktop https://docs.docker.com/desktop/)
 * visual studio code (code.visualstudio.com)
-* mongoDB compass
 
 
 ### Installation
