@@ -1,5 +1,9 @@
-import Products from '../views/Products';
+import Products from './Products';
+import { getProducts } from "./actions";
 
-export default function ProductsPage() {
-  return <Products />;
+export default async function ProductsPage() {
+
+const products = await getProducts();
+  return <Products initialProducts={products} />;
+
 }
