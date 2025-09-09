@@ -10,12 +10,13 @@ start_backend() {
     echo -e "${CYAN}==========================================${NC}"
 
     # Change directory to the backend folder
+    pwd
     cd ../python-starter || { echo -e "${RED}✖ Error: The 'backend' directory was not found. Please ensure you are in the correct directory.${NC}"; exit 1; }
     
     # Set up and activate the virtual environment
     if [ ! -d "venv" ]; then
         echo -e "  Virtual environment not found. Setting it up... ⏳"
-        if python -m venv venv; then
+        if python3 -m venv venv; then
             echo -e "  ${GREEN}✔ Virtual environment created successfully.${NC}"
         else
             echo -e "  ${RED}✖ Failed to create virtual environment. Do you have Python 3 installed?${NC}"
@@ -71,5 +72,3 @@ start_backend() {
     cd ..
     echo -e "${CYAN}==========================================${NC}"
 }
-
-start_backend

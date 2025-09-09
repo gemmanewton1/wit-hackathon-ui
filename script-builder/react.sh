@@ -26,7 +26,7 @@ start_frontend() {
     fi
 
     echo -e "  Starting the React development server... 🚀"
-    if npm start; then
+    if npm start > react-app.log 2>&1; then
         echo -e "  ${GREEN}✔ The frontend server has started. Open your browser and navigate to the provided address.${NC}"
     else
         echo -e "  ${RED}✖ Failed to start the React server.${NC}"
@@ -37,5 +37,3 @@ start_frontend() {
     # Return to the original directory after the script is done
     cd ..
 }
-
-start_frontend

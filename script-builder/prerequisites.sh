@@ -72,5 +72,3 @@ check_prerequisites() {
     echo -e "${GREEN}All checks passed! You're ready to go. 🎉${NC}"
     echo -e "${CYAN}==========================================${NC}"
 }
-
-check_prerequisites

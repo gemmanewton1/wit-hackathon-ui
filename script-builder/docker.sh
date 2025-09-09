@@ -28,5 +28,3 @@ start_docker_containers() {
     fi
     echo -e "${CYAN}==========================================${NC}"
 }
-
-start_docker_containers
