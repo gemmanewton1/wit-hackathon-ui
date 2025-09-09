@@ -29,6 +29,8 @@
 1. Check your directory in your terminal is `next-js.starter`
 2. Enter `npm run dev`
 
+## 3 - HOW TO USE NEXT.JS 
+
 ### Creating a page
 1. Create a folder inside the `app` directory
 2. Inside this folder create a `page.js` file
