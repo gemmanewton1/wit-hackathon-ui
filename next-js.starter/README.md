@@ -6,7 +6,6 @@
 * docker v24+ (install docker desktop https://docs.docker.com/desktop/)
 * visual studio code (code.visualstudio.com)
 
-
 ### Installation
 1. Clone this repo
 2. In the terminal type `cd wit-hackathon-ui` and press enter 
@@ -15,7 +14,6 @@
 
 ### env variables
 1. create a .env file and ask for the env variables from your tech lead
-
 
 ## 2 - RUNNING THE APPLICATION
 
