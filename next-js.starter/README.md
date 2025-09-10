@@ -1,3 +1,5 @@
+This next.js project has been set up so that you can write Frontend and Backend code
+
 ## 1 - PREREQUISITES & INITIAL SETUP
 
 ### Requirements
@@ -18,7 +20,7 @@
 ## 2 - RUNNING THE APPLICATION
 
 ### Run the database
-1. Open 'docker desktop' and keep it running in the background
+1. Open 'docker desktop' or 'Rancher Desktop' and keep it running in the background
 2. Open a new terminal and cd into `wit-hackathon-ui`
 3. Enter in the terminal: `docker compose up --build`
 4. You can view your database using mongo-express which should be running on `[port:](http://localhost:8081)`
@@ -26,6 +28,7 @@
 ### Run nextjs 
 1. Check your directory in your terminal is `next-js.starter`
 2. Enter `npm run dev`
+3. The project should be running on `[port:](http://localhost:3000)`
 
 ## 3 - HOW TO USE NEXT.JS 
 
