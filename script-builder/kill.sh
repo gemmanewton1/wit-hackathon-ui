@@ -9,3 +9,6 @@ for port in 3000 8080; do
     echo "No process running on port $port"
   fi
 done
+
+echo "Running 'docker compose down'..."
+docker compose stop
