@@ -8,7 +8,7 @@ This repository contains multiple codebases that you can explore and use freely:
 -   React frontend (needs npm, hooks into the Java/Python backends)
 -   Next.js app (TBA)
 -   Streamlit Python dashboard (TBA, needs Python 3)
--   Docker Compose setup for a MongoDB database (necessary for the React + backend app to work)
+-   Docker Compose setup for a MongoDB database (necessary for all apps to work except Streamlit)
 
 Refer to the briefing document for a general intro  and the `README.md` for more detailed guides
 
@@ -47,6 +47,14 @@ Use one or more of the following depending on your needs.
 #### Java Backend
 
 -   Refer to [README inside the Java backend folder](java-starter/README.md) for full instructions.
+
+#### Next.js app
+
+-   Refer to [README inside the Next-js folder](next-js.starter/README.md) for full instructions.
+- 
+#### Streamlit app
+
+-   Refer to [README inside the Streamlit app](streamlit-python-starter/README.md) for full instructions.
 
 * * * * *
 
