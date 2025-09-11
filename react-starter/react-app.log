@@ -2,10 +2,10 @@
 > my-react-app@0.1.0 start
 > react-scripts start
 
-(node:33235) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(node:80874) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:33235) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
-(node:33235) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:80874) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:80874) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
 Compiled successfully!
@@ -13,37 +13,9 @@ Compiled successfully!
 You can now view my-react-app in the browser.
 
   Local:            http://localhost:3000
-  On Your Network:  http://10.11.22.122:3000
+  On Your Network:  http://192.168.68.108:3000
 
 Note that the development build is not optimized.
 To create a production build, use yarn build.
 
 webpack compiled successfully
-Failed to compile.
-
-Module not found: Error: Can't resolve '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter'
-ERROR in Module not found: Error: Can't resolve '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter'
-
-ERROR in main
-Module not found: Error: Can't resolve '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/babel-loader/lib/index.js' in '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter'
-
-ERROR in Module not found: Error: Can't resolve '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter'
-
-ERROR in Module not found: Error: Can't resolve '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack/hot/dev-server.js' in '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter'
-
-ERROR in Error: Child compilation failed:
-Module not found: Error: Can't resolve '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/html-webpack-plugin/lib/loader.js' in '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter'
-ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/html-webpack-plugin/lib/loader.js' in '/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter'
-    at /Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack/lib/Compilation.js:2265:28
-    at /Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack/lib/NormalModuleFactory.js:949:13
-    at eval (eval at create (/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:10:1)
-    at /Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack/lib/NormalModuleFactory.js:347:22
-    at eval (eval at create (/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:9:1)
-    at /Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack/lib/NormalModuleFactory.js:532:22
-    at /Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack/lib/NormalModuleFactory.js:163:10
-    at /Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/webpack/lib/NormalModuleFactory.js:769:23
-    at /Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/neo-async/async.js:2830:7
-    at done (/Users/abishek.aneese/Documents/WiT/wit-hackathon-ui/react-starter/node_modules/neo-async/async.js:2925:13)
-
-1 ERROR in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)
-webpack compiled with 6 errors
