@@ -1,3 +1,13 @@
+# Quick Start Guide: React + Python App
+#
+# This script helps you launch the React-Python application with minimal setup.
+#
+# How to run:
+# 1. Open your terminal.
+# 2. Execute the command: sh startup-react-python.sh
+# 3. Wait for the application to start.
+# 4. Verify it's working by navigating to the "Products" page and checking for dummy data.
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
