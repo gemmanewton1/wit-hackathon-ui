@@ -87,6 +87,10 @@ This guide explains how to install and run the FastAPIProject on your local mach
       ```shell
       venv\Scripts\activate
       ```
+      **Note** if this step fails you may need to run the following command in **powershell terminal** to allow script execution:
+      ```zsh
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+      ```
     - On macOS/Linux:
       ```zsh
       source venv/bin/activate
