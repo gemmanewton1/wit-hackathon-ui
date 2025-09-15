@@ -31,8 +31,8 @@ If you're **new to coding** , we suggest using either:
 - React - good for interactive user interfaces (javascript, needs node)
 - Streamlit - good for data visualisation and quick prototypes (needs Python 3)
     - **👉 If you choose Streamlit as your frontend, you do not need a separate backend or database.**
-    Streamlit runs as a single Python script and handles logic internally.
-    However, this means you won’t be able to store data persistently unless you connect it to a database manually.
+    - Streamlit runs as a single Python script and handles logic internally.
+    - However, this means you won’t be able to store data persistently unless you connect it to a database manually.
 
 - Next.js app - Combines React frontend and backend API routes (javascript, needs node)
    -  **👉 If you choose Next.js as your frontend, you are also choosing it as your backend.**
