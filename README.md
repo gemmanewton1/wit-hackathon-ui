@@ -13,11 +13,17 @@ For the hackathon, your project will need three key components:
 ### 🛠 Choosing Your Tech Stack
 You’re free to choose any combination of technologies. However, due to time constraints, we recommend picking a stack in a language you're already comfortable with.
 
-If you're **new to coding** , we suggest using **Next.js**:
+If you're **new to coding** , we suggest using either:
+
+**Next.js**
 - It’s all in **JavaScript**.
 - Combines frontend and backend in one framework.
 - Requires minimal setup, so you can focus on building.
 
+**Streamlit**
+- It's all in **Python** and is used to make dashboards
+- Good for prototyping if you're new to coding
+- Requires minimal setup
 
 ### 🎯 Project Starters
 
