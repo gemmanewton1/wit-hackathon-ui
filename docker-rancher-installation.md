@@ -109,7 +109,7 @@ Rancher Desktop gives you a bit more control from the get-go.
     ```
     Success! You're ready to start building and running containers. Happy coding! 🚀
 
-You can now start running the mongoDB database, see [MongoDB ](./MONGODB.md)   
+You can now start running the mongoDB database, see [MongoDB ](./mongodb.md)   
 
 
 [⬅️ Back](README.md)
