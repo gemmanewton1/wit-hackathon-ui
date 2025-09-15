@@ -54,30 +54,28 @@ Click on the links below for instructions on how to run your chosen tech stack.
 #### Frontend project starters (Choose 1)
 | Section 1 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
-| 1         | [React](./docs/REACT.md)                                      |
-| 2         | [Streamlit](./docs/STREAMLIT.md)                              |
-| 3         | [Next.js*](./docs/NEXTJS.md)                                  |
+| 1         | [React](./react-starter/readme.md)                            |
+| 2         | [Streamlit](./streamlit-python-starter/readme.md)             |
+| 3         | [Next.js](./next-js.starter/readme.md)                        |
 
-* Next.js is also a backend project
 
 #### Backend project starters (Choose 1)
 
 | Section 2 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
-| 4         | [Java ](./docs/JAVA.md)                                       |
-| 5         | [Python](./docs/PYTHON.md)                                    |
-| 6         | [Next.js*](./docs/NEXTJS.md)                                  |
+| 4         | [Java ](./java-starter/readme.md)                             |
+| 5         | [Python](./python-starter/readme.md)                          |
+| 6         | [Next.js](./next-js.starter/readme.md)                        |
 
-* Next.js is also a frontend project
 
 #### Database (Install Docker/Rancher Desktop to run MongoDB)
 
 | Section 3 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
-| 7         | [Docker & Rancher Desktop](./docs/DOCKER_RANCHER_DESKTOP)     |
-| 8         | [MongoDB ](./docs/MONGODB.md)                                 | 
-| 9         | [MongoDB Dummy Data Setup*](./docs/MONGODB_DATA_SETUP.md)     | 
+| 7         | [Docker/Rancher](./docker-rancher-installation)          |
+| 8         | [MongoDB ](./mongodb.md)                                 | 
+| 9         | [MongoDB scripts*](./mongo-init/initialization-scripts.md)    | 
 
-* Not essential, useful if you want to have data already loaded into your database 
+* Not essential, useful if you want to have data already loaded into your database, automatically create collections, enforce schema validation 
 
 Happy coding!

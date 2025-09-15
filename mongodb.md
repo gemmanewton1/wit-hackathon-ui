@@ -22,4 +22,7 @@
     docker-compose down
     ```
 
-[⬅️ Back](../README.md)
+## optional
+If you would like to create collections, enforce schema validation, and seed initial data into your project, see [MongoDB Dummy Data Setup](./initialization-scripts.md)  
+
+[⬅️ Back](README.md)
