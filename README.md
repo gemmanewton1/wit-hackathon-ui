@@ -16,7 +16,7 @@ You’re free to choose any combination of technologies. However, due to time co
 If you're **new to coding** , we suggest using either:
 
 **Next.js**
-- It’s all in **JavaScript**.
+- It’s all in **JavaScript** and is good for interactive UIs.
 - Combines frontend and backend in one framework.
 - Requires minimal setup, so you can focus on building.
 
