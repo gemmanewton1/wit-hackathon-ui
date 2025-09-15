@@ -32,6 +32,9 @@ If you're **new to coding** , we suggest using either:
 - Streamlit - good for data visualisation and quick prototypes (needs Python 3)
 - Next.js app - Combines React frontend and backend API routes (javascript, needs node)
 
+**Note:** If you choose **Streamlit** for your frontend, you do **not** need to set up a separate backend or database. Streamlit runs as a single Python script and can handle logic internally.
+However, this means you won’t be able to store data persistently unless you connect it to a database manually.
+
 #### ⚙️ Backend
 - Java - Use for robust backend services (needs Java 17)
 - Python, FastAPI - Lightweight and fast (needs Python 3)
@@ -39,8 +42,6 @@ If you're **new to coding** , we suggest using either:
 
 #### 🗄️ Database
 - MongoDB - Flexible NoSQL database (Requires Docker or Rancher Desktop to run locally)
-
-Note:  If you choose **Streamlit** for your frontend, you do **not** need to set up a database. However, this means you won’t be able to store data persistently.
 
 ## 📚 Getting Started
 
