@@ -17,3 +17,6 @@ This guide explains how to use the MongoDB setup scripts (`.js` files) with your
 ## 📦 Where to Put Setup Scripts
 
 - Place your scripts (e.g. `setup.js`) in a directory called `mongo-init` in the root of your project.
+
+
+[⬅️ Back](../README.md)
