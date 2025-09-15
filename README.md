@@ -72,8 +72,8 @@ Click on the links below for instructions on how to run your chosen tech stack.
 
 | Section 3 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
-| 7         | [Docker/Rancher](./docker-rancher-installation)          |
-| 8         | [MongoDB ](./mongodb.md)                                 | 
+| 7         | [Docker/Rancher](./docker-rancher-installation)               |
+| 8         | [MongoDB ](./mongodb.md)                                      | 
 | 9         | [MongoDB scripts*](./mongo-init/initialization-scripts.md)    | 
 
 * Not essential, useful if you want to have data already loaded into your database, automatically create collections, enforce schema validation 
