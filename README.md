@@ -1,61 +1,72 @@
-Multi-Codebase Project Starters
-============================
+## 🚀 Welcome to the WiT Hackathon Repository!
 
-This repository contains multiple codebases that you can explore and use freely:
+This repository contains multiple project starters you can explore and use freely.
+For the hackathon, your project will need three key components:
 
--   Java backend (needs Java 17)
--   Python backend (needs Python 3)
--   React frontend (needs npm, hooks into the Java/Python backends)
--   Next.js app (TBA)
--   Streamlit Python dashboard (TBA, needs Python 3)
--   Docker Compose setup for a MongoDB database (necessary for all apps to work except Streamlit)
+### 🧩 Project Structure
 
-Refer to the briefing document for a general intro  and the `README.md` for more detailed guides
+- **Frontend** – The user interface (UI). This is what users see and interact with.
+- **Backend** – Handles business logic and communicates with the database.
+- **Database** – Stores all your app’s data.
 
 
-Quick Start Guide
------------------
-* * * * *
+### 🛠 Choosing Your Tech Stack
+You’re free to choose any combination of technologies. However, due to time constraints, we recommend picking a stack in a language you're already comfortable with.
 
-### 1\. MongoDB Database Setup
+If you're **new to coding** , we suggest using **Next.js**:
+- It’s all in **JavaScript**.
+- Combines frontend and backend in one framework.
+- Requires minimal setup, so you can focus on building.
 
-To start the MongoDB database (ensure Docker/Rancher are installed):
 
+### 🎯 Project Starters
 
-# Start MongoDB (add -d to run in background)
+#### 🖥️ Frontend
+- React - good for interactive user interfaces (javascript, needs node)
+- Streamlit - good for data visualisation and quick prototypes (needs Python 3)
+- Next.js app - Combines React frontend and backend API routes (javascript, needs node)
 
-docker compose up
+#### ⚙️ Backend
+- Java - Use for robust backend services (needs Java 17)
+- Python, FastAPI - Lightweight and fast (needs Python 3)
+- Next.js app - Includes backend API routes (javascript, needs node)
 
-# Stop MongoDB (add -v to remove the database volume)
+#### 🗄️ Database
+- MongoDB - Flexible NoSQL database (Requires Docker or Rancher Desktop to run locally)
 
-docker compose down
+Note:  If you choose **Streamlit** for your frontend, you do **not** need to set up a database. However, this means you won’t be able to store data persistently.
 
-* * * * *
+## 📚 Getting Started
 
-### 4\. Codebases Quick Start
+Click on the links below for instructions on how to run your chosen tech stack.
 
-Use one or more of the following depending on your needs.
+#### Frontend project starters (Choose 1)
+| Section 1 | Description                                                   |
+| --------- | ------------------------------------------------------------- |
+| 1         | [React](./docs/REACT.md)                                      |
+| 2         | [Streamlit](./docs/STREAMLIT.md)                              |
+| 3         | [Next.js*](./docs/NEXTJS.md)                                  |
 
-#### React Frontend
+* Next.js is also a backend project
 
--   Refer to the [README inside the React backend folder](react-starter/README.md) for full instructions.
+#### Backend project starters (Choose 1)
 
-#### Python Backend
+| Section 2 | Description                                                   |
+| --------- | ------------------------------------------------------------- |
+| 4         | [Java ](./docs/JAVA.md)                                       |
+| 5         | [Python](./docs/PYTHON.md)                                    |
+| 6         | [Next.js*](./docs/NEXTJS.md)                                  |
 
--   Refer to the [README inside the Python backend folder](python-starter/README.md) for full instructions.
+* Next.js is also a frontend project
 
-#### Java Backend
+#### Database (Install Docker/Rancher Desktop to run MongoDB)
 
--   Refer to [README inside the Java backend folder](java-starter/README.md) for full instructions.
+| Section 3 | Description                                                   |
+| --------- | ------------------------------------------------------------- |
+| 7         | [Docker & Rancher Desktop](./docs/DOCKER_RANCHER_DESKTOP)     |
+| 8         | [MongoDB ](./docs/MONGODB.md)                                 | 
+| 9         | [MongoDB Dummy Data Setup*](./docs/MONGODB_DATA_SETUP.md)     | 
 
-#### Next.js app
+* Not essential, useful if you want to have data already loaded into your database 
 
--   Refer to [README inside the Next-js folder](next-js.starter/README.md) for full instructions.
-- 
-#### Streamlit app
-
--   Refer to [README inside the Streamlit app](streamlit-python-starter/README.md) for full instructions.
-
-* * * * *
-
-Feel free to use any or all of the codebases as needed.
+Happy coding!
