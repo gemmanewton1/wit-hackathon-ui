@@ -55,24 +55,24 @@ Click on the links below for instructions on how to run your chosen tech stack.
 | Section 1 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
 | 1         | [React](./react-starter/README.md)                            |
-| 2         | [Streamlit](./streamlit-python-starter/readme.md)             |
-| 3         | [Next.js](./next-js.starter/readme.md)                        |
+| 2         | [Streamlit](./streamlit-python-starter/README.md)             |
+| 3         | [Next.js](./next-js.starter/README.md)                        |
 
 
 #### Backend project starters (Choose 1)
 
 | Section 2 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
-| 4         | [Java ](./java-starter/readme.md)                             |
-| 5         | [Python](./python-starter/readme.md)                          |
-| 6         | [Next.js](./next-js.starter/readme.md)                        |
+| 4         | [Java ](./java-starter/README.md)                             |
+| 5         | [Python](./python-starter/README.md)                          |
+| 6         | [Next.js](./next-js.starter/README.md)                        |
 
 
 #### Database (Install Docker/Rancher Desktop to run MongoDB)
 
 | Section 3 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
-| 7         | [Docker/Rancher](./docker-rancher-installation)               |
+| 7         | [Docker/Rancher](./docker-rancher-installation.md)            |
 | 8         | [MongoDB ](./mongodb.md)                                      | 
 | 9         | [MongoDB scripts*](./mongo-init/initialization-scripts.md)    | 
 
