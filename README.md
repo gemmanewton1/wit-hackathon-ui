@@ -54,7 +54,7 @@ Click on the links below for instructions on how to run your chosen tech stack.
 #### Frontend project starters (Choose 1)
 | Section 1 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
-| 1         | [React](./react-starter/readme.md)                            |
+| 1         | [React](./react-starter/README.md)                            |
 | 2         | [Streamlit](./streamlit-python-starter/readme.md)             |
 | 3         | [Next.js](./next-js.starter/readme.md)                        |
 
