@@ -51,7 +51,7 @@ If you're **new to coding** , we suggest using either:
 
 Click on the links below for instructions on how to run your chosen tech stack.
 
-#### Frontend project starters (Choose 1)
+#### Frontend project starters
 | Section 1 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
 | 1         | [React](./react-starter/README.md)                            |
@@ -59,7 +59,7 @@ Click on the links below for instructions on how to run your chosen tech stack.
 | 3         | [Next.js](./next-js.starter/README.md)                        |
 
 
-#### Backend project starters (Choose 1)
+#### Backend project starters
 
 | Section 2 | Description                                                   |
 | --------- | ------------------------------------------------------------- |
