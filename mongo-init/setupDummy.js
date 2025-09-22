@@ -1,12 +1,23 @@
-// Switch to (or create) the 'hackathon' database.
+// Switch to (or create) a database named 'hackathon'.
 db = db.getSiblingDB('hackathon');
 
-// Create 'members' collection with schema validation.
+/*
+Create a new collection (like a folder for similar records) called 'members'.
+We set up rules to ensure every member has certain required details:
+- First name
+- Last name
+- Email address (must look like an email)
+- Health data (must include heart rate records)
+Each heart rate record must have:
+- A time when it was measured
+- The beats per minute (between 25 and 220)
+- The activity (optional: e.g. resting, walking)
+*/
 db.createCollection('members', {
     validator: {
         $jsonSchema: {
             bsonType: "object",
-            required: ["firstName", "lastName", "email", "healthData"],
+            required: ["firstName", "lastName", "email", "healthData"], // These fields are required for each member
             properties: {
                 firstName: {
                     bsonType: "string",
@@ -18,28 +29,28 @@ db.createCollection('members', {
                 },
                 email: {
                     bsonType: "string",
-                    pattern: "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+                    pattern: "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", // Must look like a valid email
                     description: "Valid email required"
                 },
                 phone: {
                     bsonType: "string",
-                    description: "member phone number"
+                    description: "member phone number (optional)"
                 },
                 address: {
                     bsonType: "string",
-                    description: "member address"
+                    description: "member address (optional)"
                 },
                 healthData: {
                     bsonType: "object",
-                    required: ["heartRateRecords"],
+                    required: ["heartRateRecords"], // Must have at least heart rate records
                     properties: {
                         heartRateRecords: {
                             bsonType: "array",
-                            minItems: 1,
+                            minItems: 1, // At least one record required
                             description: "Heart rate data array, required",
                             items: {
                                 bsonType: "object",
-                                required: ["timestamp", "bpm"],
+                                required: ["timestamp", "bpm"], // Core measurements
                                 properties: {
                                     timestamp: {
                                         bsonType: "date",
@@ -65,14 +76,15 @@ db.createCollection('members', {
     }
 });
 
-// Create 'products' collection (sample, no validation here).
+// Create another collection named 'products'.
+// This is just used to store information about products. No special rules are set.
 db.createCollection('products');
 
-// Insert a sample member document that follows the schema.
+// Add a MEMBER record with all the required details and some heart rate readings.
 db.members.insertOne({
     firstName: "Alice",
     lastName: "Wong",
-    email: "[email protected]",
+    email: "[email protected]",
     phone: "0123456789",
     address: "42 Wellness Road",
     healthData: {
@@ -96,7 +108,7 @@ db.members.insertOne({
     }
 });
 
-// Insert a sample product.
+// Add a PRODUCT record with name, price, and some features.
 db.products.insertOne({
     name: "Heart Rate Monitor",
     price: 49.99,
