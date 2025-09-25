@@ -1,6 +1,12 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
+}
+
+body {
   font-family: Arial, sans-serif;
+  background-image: url('./assests/app-background.jpg');
+  background-size: cover;
 }
 
 .signin-container {
@@ -86,5 +92,106 @@ body {
 }
 
 .hero button:hover {
+  background: #0056b3;
+}
+
+.communities-title {
+  color: #007bff;
+}
+
+.navbar-opaque {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-container {
+  max-width: 1100px; /* was 900px */
+  margin: 40px auto;
+  background: rgba(255,255,255,0.96); /* slightly more opaque */
+  border-radius: 20px; /* slightly larger radius */
+  box-shadow: 0 2px 24px rgba(0,0,0,0.10); /* slightly stronger shadow */
+  padding: 40px 32px 32px 32px; /* more padding */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.streak-section {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.streak-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.streak-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: 2px solid #ccc;
+  transition: background 0.2s;
+}
+
+.streak-dot.active {
+  background: #007bff;
+  border-color: #007bff;
+}
+
+.split-section {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.split-left, .split-right {
+  flex: 1 1 300px;
+  background: rgba(245,245,245,0.8);
+  border-radius: 10px;
+  padding: 24px;
+  box-sizing: border-box;
+  min-width: 260px;
+}
+
+.graph-placeholder {
+  margin-top: 18px;
+  height: 120px;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f5f6fa 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px dashed #b3b3b3;
+}
+
+.dashboard-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  gap: 18px;
+}
+
+.dashboard-buttons button {
+  flex: 1 1 0;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.2s;
+}
+
+.dashboard-buttons button:hover {
   background: #0056b3;
 }

@@ -15,7 +15,7 @@ const CommunitiesPage = () => {
   };
   return (
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1>Recommended Communities</h1>
+      <h1 className="communities-title">Recommended Communities</h1>
       <button onClick={handleBack}>Back</button>
 
       {/* Search Bar */}
@@ -44,7 +44,7 @@ const CommunitiesPage = () => {
               borderRadius: "8px",
             }}
           >
-            <div>
+            <div className="community-tile">
               <h2 style={{ margin: "0" }}>{community.name}</h2>
               <p style={{ margin: "5px 0 0", color: "#555" }}>
                 {community.members} members
