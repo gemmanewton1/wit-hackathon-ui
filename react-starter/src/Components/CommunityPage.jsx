@@ -15,7 +15,7 @@ const CommunitiesPage = () => {
   };
   return (
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-      <h1>Recommended Communities</h1>
+      <h1 className="communities-title">Recommended Communities</h1>
       <button onClick={handleBack}>Back</button>
 
       {/* Search Bar */}

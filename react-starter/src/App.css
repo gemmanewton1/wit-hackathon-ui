@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  /* background: #add8e6; */
 }
 
 .signin-container {
@@ -87,4 +88,8 @@ body {
 
 .hero button:hover {
   background: #0056b3;
+}
+
+.communities-title {
+  color: #CC5500;
 }
