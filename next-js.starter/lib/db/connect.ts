@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.DATABASE_URL;
+const MONGODB_URI =
+  "mongodb://root:example@localhost:27017/hackathon?authSource=admin";
 
 if (!MONGODB_URI) {
   throw new Error("❌ DATABASE_URL is not defined in environment variables");

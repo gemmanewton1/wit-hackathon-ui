@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Card from './components/Card';
-import Button from './components/Button';
-import Alert from './components/Alert';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Card from "./components/Card";
+import Button from "./components/Button";
+import Alert from "./components/Alert";
 
 const Home = () => {
   const [showAlert, setShowAlert] = useState(false);
@@ -16,36 +16,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>🚀 Welcome to the WiT Hackathon Starter App</h1>
-
-      <Card title="Introduction">
-        <p>
-          This is a demo React app designed to give you a helpful starting point
-          for your Hackathon project. It comes with:
-        </p>
-
-        <ul>
-          <li>
-            A working connection to a <strong>Spring Boot</strong> backend
-          </li>
-          <li>
-            The backend is set up with <strong>MongoDB</strong> and exposes a
-            simple API
-          </li>
-          <li>
-            The frontend demonstrates basic <strong>CRUD operations</strong>
-            (excluding update)
-          </li>
-          <li>A few simple, reusable React components</li>
-          <li>A clean project setup to guide your development</li>
-        </ul>
-
-        <p>
-          You're free to use this app as a guide, starting point, or inspiration
-          – <strong>but you're not required to use it</strong>. Feel free to
-          explore, borrow bits, or build from scratch.
-        </p>
-      </Card>
+      <Card title="Introduction"></Card>
 
       <Card title="Get Started">
         <p>
@@ -63,11 +34,11 @@ const Home = () => {
 
       <Card title="Navigation Demo">
         <p>Try visiting the other pages using these buttons:</p>
-        <Button label="Products" onClick={() => handleNavigate('/products')} />
+        <Button label="Products" onClick={() => handleNavigate("/products")} />
         <Button
           label="Customers"
-          onClick={() => handleNavigate('/customers')}
-          style={{ marginLeft: '10px' }}
+          onClick={() => handleNavigate("/customers")}
+          style={{ marginLeft: "10px" }}
         />
       </Card>
     </div>
