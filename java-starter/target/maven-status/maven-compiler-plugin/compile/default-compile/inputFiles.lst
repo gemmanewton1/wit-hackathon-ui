@@ -1,0 +1,10 @@
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/model/Product.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/Utils/SSLBypass.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/model/Customer.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/controller/ProductController.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/controller/CustomerController.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/MongoConnectionVerifier.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/HackathonStarterApplication.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/repository/CustomerRepository.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/repository/ProductRepository.java
+/Users/Michelle.Yip/wit-hackathon-ui/java-starter/src/main/java/com/example/demo/aspect/LoggingAspect.java

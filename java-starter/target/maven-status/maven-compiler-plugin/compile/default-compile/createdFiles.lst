@@ -1,0 +1,11 @@
+com/example/demo/MongoConnectionVerifier.class
+com/example/demo/model/Customer.class
+com/example/demo/repository/ProductRepository.class
+com/example/demo/aspect/LoggingAspect.class
+com/example/demo/Utils/SSLBypass.class
+com/example/demo/repository/CustomerRepository.class
+com/example/demo/controller/ProductController.class
+com/example/demo/controller/CustomerController.class
+com/example/demo/model/Product.class
+com/example/demo/Utils/SSLBypass$1.class
+com/example/demo/HackathonStarterApplication.class
