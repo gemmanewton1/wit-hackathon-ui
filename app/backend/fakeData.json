@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Sleep - 7.5 hrs",
+    "type": "sleep",
+    "source": "Oura",
+    "start": "2025-09-23T23:00:00Z",
+    "end": "2025-09-24T06:30:00Z"
+  },
+  {
+    "title": "Morning Run - 5km",
+    "type": "workout",
+    "source": "Fitbit",
+    "start": "2025-09-24T07:00:00Z",
+    "end": "2025-09-24T08:00:00Z"
+  },
+  {
+    "title": "Work Meeting",
+    "type": "meeting",
+    "source": "Google Calendar",
+    "start": "2025-09-24T07:30:00Z",
+    "end": "2025-09-24T08:30:00Z"
+  },
+  {
+    "title": "Meditation",
+    "type": "meditation",
+    "source": "Headspace",
+    "start": "2025-09-24T09:00:00Z",
+    "end": "2025-09-24T09:10:00Z"
+  }
+]
