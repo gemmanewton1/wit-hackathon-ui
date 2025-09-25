@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StreakSection from "./Streak";
-import SpeechBubble from "./SpeechBubble";
 import SheKnowsBot from "./Bot";
 
 function LandingPage() {
