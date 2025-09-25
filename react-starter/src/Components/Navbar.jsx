@@ -1,9 +1,22 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 const Navbar = ({ links = [] }) => (
-  <nav style={{ background: "#007bff", padding: "10px" }}>
+  <nav className="navbar-opaque" style={{ padding: "16px", display: "flex", alignItems: "center" }}>
     {links.map(link => (
-      <a key={link.label} href={link.href} style={{ color: "white", marginRight: 16, textDecoration: "none" }}>
+      <Link
+        key={link.label}
+        to={link.href}
+        style={{
+          color: "#222",
+          marginRight: 24,
+          textDecoration: "none",
+          fontWeight: "bold",
+          fontSize: "18px"
+        }}
+      >
         {link.label}
-      </a>
+      </Link>
     ))}
   </nav>
 );
