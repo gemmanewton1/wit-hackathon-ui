@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StreakSection from "./Streak";
+import SpeechBubble from "./SpeechBubble";
+import SheKnowsBot from "./Bot";
 
 function LandingPage() {
   return (
@@ -18,11 +21,14 @@ function LandingPage() {
           </li>
         </ul>
       </nav>
-      <section className="hero">
-        <h1>Welcome to MyApp</h1>
-        <p>Your new favorite app for everything.</p>
-        <button>Get Started</button>
-      </section>
+      <div>
+        <button>Export</button>
+        {/* </div>
+      <div className="flex justify-center items-center h-screen bg-gray-100"> */}
+        {/* <SpeechBubble text="Hello! I'm a speech bubble." /> */}
+
+        <SheKnowsBot />
+      </div>
     </div>
   );
 }

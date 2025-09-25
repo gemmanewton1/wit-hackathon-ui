@@ -100,3 +100,70 @@ body {
 .communities-title {
   color: #CC5500;
 }
+
+
+.chat-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.chat-window {
+  width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.chat-message {
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+.chat-message.bot {
+  background: #e0e0e0;
+  align-self: flex-start;
+}
+
+.chat-message.user {
+  background: #4caf50;
+  color: white;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.options {
+  margin-top: 15px;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.selected {
+  background: #4caf50;
+  color: white;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  background: #2196f3;
+  color: white;
+}
