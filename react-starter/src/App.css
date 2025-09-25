@@ -96,164 +96,102 @@ body {
 }
 
 .communities-title {
-  color: #CC5500;
-}
-
-
-.chat-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.chat-window {
-  width: 400px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  background: #f9f9f9;
-}
-
-.chat-message {
-  padding: 10px 15px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  max-width: 80%;
-}
-
-.chat-message.bot {
-  background: #e0e0e0;
-  align-self: flex-start;
-}
-
-.chat-message.user {
-  background: #4caf50;
-  color: white;
-  align-self: flex-end;
-  text-align: right;
-}
-
-.options {
-  margin-top: 15px;
-}
-
-.section {
-  margin-bottom: 10px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 5px;
-}
-
-button {
-  padding: 6px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button.selected {
-  background: #4caf50;
-  color: white;
-}
-
-.submit-btn {
-  margin-top: 10px;
-  background: #2196f3;
-  color: white;
-}
-
-.chat-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 30px;
-}
-
-.chat-window {
-  width: 600px; /* bigger chat window */
-  height: 500px; /* taller chat window */
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 20px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.chat-message {
-  padding: 12px 18px;
-  border-radius: 20px;
-  margin-bottom: 12px;
-  max-width: 75%;
-  font-size: 16px;
-  line-height: 1.4;
-}
-
-.chat-message.bot {
-  background: #e0e0e0;
-  align-self: flex-start;
-}
-
-.chat-message.user {
-  background: #4caf50;
-  color: white;
-  align-self: flex-end;
-  text-align: right;
-}
-
-.options {
-  margin-top: 15px;
-}
-
-.section {
-  margin-bottom: 12px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-button {
-  padding: 10px 16px; /* bigger buttons */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button.selected {
-  background: #4caf50;
-  color: white;
-}
-
-.submit-btn {
-  margin-top: 12px;
-  background: #2196f3;
-  color: white;
-  padding: 12px 18px;
-  font-size: 16px;
-}
-
-input[type="number"] {
-  padding: 10px;
-  font-size: 16px;
-  width: 80px;
-  margin-right: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  color: #007bff;
 }
 
 .navbar-opaque {
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
     border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-container {
+  max-width: 1100px; /* was 900px */
+  margin: 40px auto;
+  background: rgba(255,255,255,0.96); /* slightly more opaque */
+  border-radius: 20px; /* slightly larger radius */
+  box-shadow: 0 2px 24px rgba(0,0,0,0.10); /* slightly stronger shadow */
+  padding: 40px 32px 32px 32px; /* more padding */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.streak-section {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.streak-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.streak-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: 2px solid #ccc;
+  transition: background 0.2s;
+}
+
+.streak-dot.active {
+  background: #007bff;
+  border-color: #007bff;
+}
+
+.split-section {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.split-left, .split-right {
+  flex: 1 1 300px;
+  background: rgba(245,245,245,0.8);
+  border-radius: 10px;
+  padding: 24px;
+  box-sizing: border-box;
+  min-width: 260px;
+}
+
+.graph-placeholder {
+  margin-top: 18px;
+  height: 120px;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f5f6fa 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px dashed #b3b3b3;
+}
+
+.dashboard-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  gap: 18px;
+}
+
+.dashboard-buttons button {
+  flex: 1 1 0;
+  padding: 16px 0;
+  font-size: 1.1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background 0.2s;
+}
+
+.dashboard-buttons button:hover {
+  background: #0056b3;
 }
