@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 /**
  * Customer entity representing a person in the system (MongoDB document).
  */
+//add comment
 @Document(collection = "customers")
 public class Customer {
 
