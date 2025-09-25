@@ -5,10 +5,8 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url('./assests/background-wit.png');
+  background-image: url('./assests/app-background.jpg');
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .signin-container {
@@ -99,4 +97,10 @@ body {
 
 .communities-title {
   color: #CC5500;
+}
+
+.navbar-opaque {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border-bottom: 1px solid #e0e0e0;
 }
