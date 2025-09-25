@@ -1,7 +1,14 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
+}
+
+body {
   font-family: Arial, sans-serif;
-  /* background: #add8e6; */
+  background-image: url('./assests/background-wit.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .signin-container {

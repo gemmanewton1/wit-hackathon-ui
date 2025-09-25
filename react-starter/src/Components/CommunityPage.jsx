@@ -44,7 +44,7 @@ const CommunitiesPage = () => {
               borderRadius: "8px",
             }}
           >
-            <div>
+            <div className="community-tile">
               <h2 style={{ margin: "0" }}>{community.name}</h2>
               <p style={{ margin: "5px 0 0", color: "#555" }}>
                 {community.members} members
