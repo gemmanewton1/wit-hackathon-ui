@@ -1,37 +1,17 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Views/Home";
-import Products from "./Views/Products";
-import Customers from "./Views/Customers";
-import NotFound from "./Views/NotFound";
-import logo from "./witLogo.png";
-import "./App.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import SignIn from "./Components/SignIn";
+import LandingPage from "./Components/LandingPage";
+import CommunitiesPage from "./Components/CommunityPage";
 
-const App = () => (
-  <Router>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <nav style={{ marginBottom: "2rem" }}>
-          <Link to="/" style={{ margin: "0 10px", color: "#61dafb" }}>
-            Home
-          </Link>
-          <Link to="/products" style={{ margin: "0 10px", color: "#61dafb" }}>
-            Products
-          </Link>
-          <Link to="/customers" style={{ margin: "0 10px", color: "#61dafb" }}>
-            Customers
-          </Link>
-        </nav>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/customers" element={<Customers />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </header>
-    </div>
-  </Router>
-);
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<SignIn />} />
+      <Route path="/landing" element={<LandingPage />} />
+      <Route path="/communities" element={<CommunitiesPage />} />
+    </Routes>
+  );
+}
 
 export default App;
