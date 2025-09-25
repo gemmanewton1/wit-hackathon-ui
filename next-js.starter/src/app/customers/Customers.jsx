@@ -10,27 +10,8 @@ const Customers = ({initialCustomers}) => {
   const [error, setError] = useState(null);
 
 
-  const handleAddCustomer = async (customer) => {
-    setError(null);
-    if(!error){
-      try {
-        const newCustomer = await addCustomer(customer);
-        setCustomers((previousCustomers) => [...previousCustomers, newCustomer]);
-      } catch (err) {
-        console.error(err);
-      }
-    }
-  };
 
-  const handleDeleteCustomer = async (id) => {
-      setError(null);
-      try {
-        await deleteCustomer(id);
-        setCustomers((prev) => prev.filter((customer) => customer.id !== id));
-      } catch (err) {
-        console.error(err);
-      }
-    };
+
   return (
     <div style={{ width: "100%" }}>
       <h1>Customers</h1>
@@ -52,10 +33,10 @@ const Customers = ({initialCustomers}) => {
           {error}
         </p>
       )}
-      {customers.length > 0 && (
+      {/* {customers.length > 0 && (
         <CustomerTable customers={customers} onDelete={handleDeleteCustomer} />
       )}
-      <CustomerForm onAddCustomer={handleAddCustomer} />
+      <CustomerForm onAddCustomer={handleAddCustomer} /> */}
     </div>
   );
 };

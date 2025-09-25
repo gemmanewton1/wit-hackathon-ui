@@ -48,19 +48,19 @@ const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'd
 }
 
 
-export async function getCustomers(): Promise<CustomerType[]> {
-  const customers = await Customer.find({});
+// export async function getCustomers(): Promise<CustomerType[]> {
+//   const customers = await Customer.find({});
 
-  return customers.map((customer) => ({
-      id: customer.id,
-      firstName: customer.firstName,
-      lastName: customer.lastName,
-      email: customer.email,
-      phone: customer.phone,
-      address: customer.address,
-      dateOfBirth: customer.dateOfBirth,
-  }));
-}
+//   return customers.map((customer) => ({
+//       id: customer.id,
+//       firstName: customer.firstName,
+//       lastName: customer.lastName,
+//       email: customer.email,
+//       phone: customer.phone,
+//       address: customer.address,
+//       dateOfBirth: customer.dateOfBirth,
+//   }));
+// }
 
 export async function deleteCustomer(customerId: string){
 

@@ -34,12 +34,8 @@ const Home = () => {
 
       <Card title="Navigation Demo">
         <p>Try visiting the other pages using these buttons:</p>
-        <Button label="Products" onClick={() => handleNavigate("/products")} />
-        <Button
-          label="Customers"
-          onClick={() => handleNavigate("/customers")}
-          style={{ marginLeft: "10px" }}
-        />
+        <Button label="Products" onClick={() => handleNavigate("/customers")} />
+
       </Card>
     </div>
   );
