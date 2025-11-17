@@ -1,3 +1,10 @@
+### Requirements
+* node v20.3+ (install here: nodejs.org)
+* npm v9.6+ (installed when you install node) 
+* docker v24+ (install docker desktop https://docs.docker.com/desktop/)
+    Alternatively use Rancher Desktop (https://rancherdesktop.io/)
+* visual studio code (code.visualstudio.com)
+
 ### 3\. React Quick Start
 
 Ensure Node.js (`node` and `npm`) is installed:
